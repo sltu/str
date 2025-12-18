@@ -15,7 +15,7 @@
     <img src="https://img.shields.io/github/v/tag/goforj/str?label=version&sort=semver" alt="Latest tag">
     <a href="https://codecov.io/gh/goforj/str" ><img src="https://codecov.io/github/goforj/str/graph/badge.svg?token=9KT46ZORP3"/></a>
 <!-- test-count:embed:start -->
-    <img src="https://img.shields.io/badge/tests-152-brightgreen" alt="Tests">
+    <img src="https://img.shields.io/badge/tests-154-brightgreen" alt="Tests">
 <!-- test-count:embed:end -->
     <a href="https://goreportcard.com/report/github.com/goforj/str"><img src="https://goreportcard.com/badge/github.com/goforj/str" alt="Go Report Card"></a>
 </p>
@@ -54,7 +54,7 @@ This guarantees all examples are valid, up-to-date, and remain functional as the
 | **Masking** | [Mask](#mask) |
 | **Match** | [Is](#is) [IsMatch](#ismatch) |
 | **Padding** | [PadBoth](#padboth) [PadLeft](#padleft) [PadRight](#padright) |
-| **Replace** | [Remove](#remove) [ReplaceArray](#replacearray) [ReplaceFirst](#replacefirst) [ReplaceLast](#replacelast) [ReplaceMatches](#replacematches) [Swap](#swap) |
+| **Replace** | [Remove](#remove) [ReplaceAll](#replaceall) [ReplaceArray](#replacearray) [ReplaceFirst](#replacefirst) [ReplaceLast](#replacelast) [ReplaceMatches](#replacematches) [Swap](#swap) |
 | **Search** | [Contains](#contains) [ContainsAll](#containsall) [ContainsAllFold](#containsallfold) [ContainsFold](#containsfold) [Count](#count) [DoesntContain](#doesntcontain) [DoesntContainFold](#doesntcontainfold) [DoesntEndWith](#doesntendwith) [DoesntEndWithFold](#doesntendwithfold) [DoesntStartWith](#doesntstartwith) [DoesntStartWithFold](#doesntstartwithfold) [EndsWith](#endswith) [EndsWithFold](#endswithfold) [Index](#index) [LastIndex](#lastindex) [StartsWith](#startswith) [StartsWithFold](#startswithfold) |
 | **Slug** | [Slug](#slug) |
 | **Snippet** | [Excerpt](#excerpt) |
@@ -545,6 +545,17 @@ Remove deletes all occurrences of provided substrings.
 v := str.Of("The Go Toolkit").Remove("Go ").String()
 godump.Dump(v)
 // #string The Toolkit
+```
+
+### <a id="replaceall"></a>ReplaceAll
+
+ReplaceAll replaces all occurrences of old with new in the string.
+If old is empty, the original string is returned unchanged.
+
+```go
+v := str.Of("go gopher go").ReplaceAll("go", "Go").String()
+godump.Dump(v)
+// #string Go Gopher Go
 ```
 
 ### <a id="replacearray"></a>ReplaceArray
