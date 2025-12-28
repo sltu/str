@@ -15,7 +15,7 @@
     <img src="https://img.shields.io/github/v/tag/goforj/str?label=version&sort=semver" alt="Latest tag">
     <a href="https://codecov.io/gh/goforj/str" ><img src="https://codecov.io/github/goforj/str/graph/badge.svg?token=9KT46ZORP3"/></a>
 <!-- test-count:embed:start -->
-    <img src="https://img.shields.io/badge/tests-176-brightgreen" alt="Tests">
+    <img src="https://img.shields.io/badge/tests-185-brightgreen" alt="Tests">
 <!-- test-count:embed:end -->
     <a href="https://goreportcard.com/report/github.com/goforj/str"><img src="https://goreportcard.com/badge/github.com/goforj/str" alt="Go Report Card"></a>
 </p>
@@ -53,15 +53,15 @@ This guarantees all examples are valid, up-to-date, and remain functional as the
 | **Fluent** | [GoString](#gostring) [Of](#of) [String](#string) |
 | **Length** | [Len](#len) [RuneCount](#runecount) |
 | **Masking** | [Mask](#mask) |
-| **Match** | [Is](#is) [IsMatch](#ismatch) |
+| **Match** | [Is](#is) [IsMatch](#ismatch) [Match](#match) [MatchAll](#matchall) |
 | **Padding** | [PadBoth](#padboth) [PadLeft](#padleft) [PadRight](#padright) |
 | **Pluralize** | [Plural](#plural) [Singular](#singular) |
-| **Replace** | [Remove](#remove) [ReplaceAll](#replaceall) [ReplaceArray](#replacearray) [ReplaceFirst](#replacefirst) [ReplaceFirstFold](#replacefirstfold) [ReplaceFold](#replacefold) [ReplaceLast](#replacelast) [ReplaceLastFold](#replacelastfold) [ReplaceMatches](#replacematches) [Swap](#swap) |
+| **Replace** | [Remove](#remove) [ReplaceAll](#replaceall) [ReplaceArray](#replacearray) [ReplaceEnd](#replaceend) [ReplaceFirst](#replacefirst) [ReplaceFirstFold](#replacefirstfold) [ReplaceFold](#replacefold) [ReplaceLast](#replacelast) [ReplaceLastFold](#replacelastfold) [ReplaceMatches](#replacematches) [ReplaceStart](#replacestart) [Swap](#swap) |
 | **Search** | [Contains](#contains) [ContainsAll](#containsall) [ContainsAllFold](#containsallfold) [ContainsFold](#containsfold) [Count](#count) [DoesntContain](#doesntcontain) [DoesntContainFold](#doesntcontainfold) [DoesntEndWith](#doesntendwith) [DoesntEndWithFold](#doesntendwithfold) [DoesntStartWith](#doesntstartwith) [DoesntStartWithFold](#doesntstartwithfold) [EndsWith](#endswith) [EndsWithFold](#endswithfold) [Index](#index) [LastIndex](#lastindex) [StartsWith](#startswith) [StartsWithFold](#startswithfold) |
 | **Slug** | [Slug](#slug) |
 | **Snippet** | [Excerpt](#excerpt) |
 | **Split** | [Lines](#lines) [Split](#split) [UcSplit](#ucsplit) |
-| **Substrings** | [After](#after) [AfterLast](#afterlast) [Before](#before) [BeforeLast](#beforelast) [Between](#between) [BetweenFirst](#betweenfirst) [CharAt](#charat) [Limit](#limit) [Slice](#slice) [Take](#take) [TakeLast](#takelast) |
+| **Substrings** | [After](#after) [AfterLast](#afterlast) [Before](#before) [BeforeLast](#beforelast) [Between](#between) [BetweenFirst](#betweenfirst) [CharAt](#charat) [Limit](#limit) [Slice](#slice) [SubstrReplace](#substrreplace) [Take](#take) [TakeLast](#takelast) |
 | **Transform** | [Repeat](#repeat) [Reverse](#reverse) [Transliterate](#transliterate) |
 | **Words** | [FirstWord](#firstword) [Join](#join) [LastWord](#lastword) [SplitWords](#splitwords) [WordCount](#wordcount) [Words](#words) [WrapWords](#wrapwords) |
 
@@ -538,6 +538,28 @@ str.Dump(v)
 // #bool true
 ```
 
+### <a id="match"></a>Match
+
+Match returns the first match and submatches for the pattern.
+
+```go
+re := regexp.MustCompile(`g(o+)`)
+v := str.Of("gooo").Match(re)
+str.Dump(v)
+// #[]string [gooo ooo]
+```
+
+### <a id="matchall"></a>MatchAll
+
+MatchAll returns all matches and submatches for the pattern.
+
+```go
+re := regexp.MustCompile(`go+`)
+v := str.Of("go gopher gooo").MatchAll(re)
+str.Dump(v)
+// #[][]string [[go] [gooo]]
+```
+
 ## Padding
 
 ### <a id="padboth"></a>PadBoth
@@ -625,6 +647,16 @@ str.Dump(v.ReplaceArray([]string{"---"}, "-").String())
 // #string The-Go-Toolkit
 ```
 
+### <a id="replaceend"></a>ReplaceEnd
+
+ReplaceEnd replaces old with repl at the end of the string, if present.
+
+```go
+v := str.Of("file.old").ReplaceEnd(".old", ".new").String()
+str.Dump(v)
+// #string file.new
+```
+
 ### <a id="replacefirst"></a>ReplaceFirst
 
 ReplaceFirst replaces the first occurrence of old with repl.
@@ -684,6 +716,16 @@ re := regexp.MustCompile(`\d+`)
 v := str.Of("Hello 123 World").ReplaceMatches(re, func(m string) string { return "[" + m + "]" }).String()
 str.Dump(v)
 // #string Hello [123] World
+```
+
+### <a id="replacestart"></a>ReplaceStart
+
+ReplaceStart replaces old with repl at the start of the string, if present.
+
+```go
+v := str.Of("prefix-value").ReplaceStart("prefix-", "new-").String()
+str.Dump(v)
+// #string new-value
 ```
 
 ### <a id="swap"></a>Swap
@@ -1034,6 +1076,16 @@ Indices are clamped; if start >= end the result is empty.
 v := str.Of("naïve café").Slice(3, 7).String()
 str.Dump(v)
 // #string e ca
+```
+
+### <a id="substrreplace"></a>SubstrReplace
+
+SubstrReplace replaces the rune slice in [start:end) with repl.
+
+```go
+v := str.Of("naïve café").SubstrReplace("i", 2, 3).String()
+str.Dump(v)
+// #string naive café
 ```
 
 ### <a id="take"></a>Take
