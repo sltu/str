@@ -3,10 +3,7 @@
 
 package main
 
-import (
-	"github.com/goforj/godump"
-	"github.com/goforj/str"
-)
+import "github.com/goforj/str"
 
 func main() {
 	// AfterLast returns the substring after the last occurrence of sep.
@@ -14,6 +11,6 @@ func main() {
 
 	// Example: slice after last separator
 	v := str.Of("pkg/path/file.txt").AfterLast("/").String()
-	godump.Dump(v)
+	str.Dump(v)
 	// #string file.txt
 }

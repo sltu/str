@@ -3,16 +3,13 @@
 
 package main
 
-import (
-	"github.com/goforj/godump"
-	"github.com/goforj/str"
-)
+import "github.com/goforj/str"
 
 func main() {
 	// ReplaceFirstFold replaces the first occurrence of old with repl using Unicode case folding.
 
 	// Example: replace first (case-insensitive)
 	v := str.Of("go gopher GO").ReplaceFirstFold("GO", "Go").String()
-	godump.Dump(v)
+	str.Dump(v)
 	// #string Go gopher GO
 }

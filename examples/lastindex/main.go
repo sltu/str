@@ -3,16 +3,13 @@
 
 package main
 
-import (
-	"github.com/goforj/godump"
-	"github.com/goforj/str"
-)
+import "github.com/goforj/str"
 
 func main() {
 	// LastIndex returns the rune index of the last occurrence of sub, or -1 if not found.
 
 	// Example: last rune index
 	v := str.Of("go gophers go").LastIndex("go")
-	godump.Dump(v)
+	str.Dump(v)
 	// #int 10
 }

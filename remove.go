@@ -8,7 +8,7 @@ import "strings"
 // Example: remove substrings
 //
 //	v := str.Of("The Go Toolkit").Remove("Go ").String()
-//	godump.Dump(v)
+//	str.Dump(v)
 //	// #string The Toolkit
 func (s String) Remove(subs ...string) String {
 	out := s.s

@@ -3,16 +3,13 @@
 
 package main
 
-import (
-	"github.com/goforj/godump"
-	"github.com/goforj/str"
-)
+import "github.com/goforj/str"
 
 func main() {
 	// StartsWith reports whether the string starts with any of the provided prefixes (case-sensitive).
 
 	// Example: starts with any
 	v := str.Of("gopher").StartsWith("go", "rust")
-	godump.Dump(v)
+	str.Dump(v)
 	// #bool true
 }

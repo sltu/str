@@ -3,16 +3,13 @@
 
 package main
 
-import (
-	"github.com/goforj/godump"
-	"github.com/goforj/str"
-)
+import "github.com/goforj/str"
 
 func main() {
 	// ReplaceLast replaces the last occurrence of old with repl.
 
 	// Example: replace last
 	v := str.Of("gopher gopher").ReplaceLast("gopher", "go").String()
-	godump.Dump(v)
+	str.Dump(v)
 	// #string gopher go
 }

@@ -3,16 +3,13 @@
 
 package main
 
-import (
-	"github.com/goforj/godump"
-	"github.com/goforj/str"
-)
+import "github.com/goforj/str"
 
 func main() {
 	// Kebab converts the string to kebab-case.
 
 	// Example: kebab case
 	v := str.Of("fooBar baz").Kebab().String()
-	godump.Dump(v)
+	str.Dump(v)
 	// #string foo-bar-baz
 }

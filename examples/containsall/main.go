@@ -3,10 +3,7 @@
 
 package main
 
-import (
-	"github.com/goforj/godump"
-	"github.com/goforj/str"
-)
+import "github.com/goforj/str"
 
 func main() {
 	// ContainsAll reports whether the string contains all provided substrings (case-sensitive).
@@ -14,6 +11,6 @@ func main() {
 
 	// Example: contains all
 	v := str.Of("Go means gophers").ContainsAll("Go", "gopher")
-	godump.Dump(v)
+	str.Dump(v)
 	// #bool true
 }

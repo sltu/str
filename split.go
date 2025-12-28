@@ -8,7 +8,7 @@ import "strings"
 // Example: split on comma
 //
 //	v := str.Of("a,b,c").Split(",")
-//	godump.Dump(v)
+//	str.Dump(v)
 //	// #[]string [a b c]
 func (s String) Split(sep string) []string {
 	return strings.Split(s.s, sep)

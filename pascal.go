@@ -11,7 +11,7 @@ import (
 // Example: pascal case
 //
 //	v := str.Of("foo_bar baz")
-//	godump.Dump(v)
+//	str.Dump(v)
 //	// #string FooBarBaz
 func (s String) Pascal() String {
 	words := splitWordsRunes(s.s)

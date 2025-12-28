@@ -9,7 +9,7 @@ import "unicode"
 // Example: uppercase each word start
 //
 //	v := str.Of("hello WORLD").UcWords().String()
-//	godump.Dump(v)
+//	str.Dump(v)
 //	// #string Hello WORLD
 func (s String) UcWords() String {
 	var out []rune

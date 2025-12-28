@@ -3,16 +3,13 @@
 
 package main
 
-import (
-	"github.com/goforj/godump"
-	"github.com/goforj/str"
-)
+import "github.com/goforj/str"
 
 func main() {
 	// Pascal converts the string to PascalCase.
 
 	// Example: pascal case
 	v := str.Of("foo_bar baz")
-	godump.Dump(v)
+	str.Dump(v)
 	// #string FooBarBaz
 }

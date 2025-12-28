@@ -8,7 +8,7 @@ import "strings"
 // Example: lowercase text
 //
 //	v := str.Of("GoLang").ToLower().String()
-//	godump.Dump(v)
+//	str.Dump(v)
 //	// #string golang
 func (s String) ToLower() String {
 	return String{s: strings.ToLower(s.s)}

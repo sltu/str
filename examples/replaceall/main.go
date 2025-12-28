@@ -3,10 +3,7 @@
 
 package main
 
-import (
-	"github.com/goforj/godump"
-	"github.com/goforj/str"
-)
+import "github.com/goforj/str"
 
 func main() {
 	// ReplaceAll replaces all occurrences of old with new in the string.
@@ -14,6 +11,6 @@ func main() {
 
 	// Example: replace all occurrences
 	v := str.Of("go gopher go").ReplaceAll("go", "Go").String()
-	godump.Dump(v)
+	str.Dump(v)
 	// #string Go Gopher Go
 }

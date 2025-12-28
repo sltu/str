@@ -12,7 +12,7 @@ type String struct {
 // Example: wrap raw string
 //
 //	v := str.Of("gopher")
-//	godump.Dump(v.String())
+//	str.Dump(v.String())
 //	// #string gopher
 func Of(s string) String {
 	return String{s: s}
@@ -24,7 +24,7 @@ func Of(s string) String {
 // Example: unwrap to plain string
 //
 //	v := str.Of("go").String()
-//	godump.Dump(v)
+//	str.Dump(v)
 //	// #string go
 func (s String) String() string {
 	return s.s
@@ -36,7 +36,7 @@ func (s String) String() string {
 // Example: fmt %#v uses GoString
 //
 //	v := str.Of("go")
-//	godump.Dump(fmt.Sprintf("%#v", v))
+//	str.Dump(fmt.Sprintf("%#v", v))
 //	// #string go
 func (s String) GoString() string {
 	return s.s

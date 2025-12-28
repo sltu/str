@@ -8,7 +8,7 @@ import "strings"
 // Example: repeat string
 //
 //	v := str.Of("go").Repeat(3).String()
-//	godump.Dump(v)
+//	str.Dump(v)
 //	// #string gogogo
 func (s String) Repeat(count int) String {
 	if count <= 0 {

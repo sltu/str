@@ -11,7 +11,7 @@ import (
 // Example: camel case
 //
 //	v := str.Of("foo_bar baz").Camel().String()
-//	godump.Dump(v)
+//	str.Dump(v)
 //	// #string fooBarBaz
 func (s String) Camel() String {
 	words := splitWordsRunes(s.s)

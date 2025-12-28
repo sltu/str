@@ -3,16 +3,13 @@
 
 package main
 
-import (
-	"github.com/goforj/godump"
-	"github.com/goforj/str"
-)
+import "github.com/goforj/str"
 
 func main() {
 	// UcFirst returns the string with the first rune upper-cased.
 
 	// Example: uppercase first rune
 	v := str.Of("gopher").UcFirst().String()
-	godump.Dump(v)
+	str.Dump(v)
 	// #string Gopher
 }

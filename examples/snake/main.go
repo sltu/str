@@ -3,16 +3,13 @@
 
 package main
 
-import (
-	"github.com/goforj/godump"
-	"github.com/goforj/str"
-)
+import "github.com/goforj/str"
 
 func main() {
 	// Snake converts the string to snake_case using the provided separator (default "_").
 
 	// Example: snake case
 	v := str.Of("fooBar baz").Snake("_").String()
-	godump.Dump(v)
+	str.Dump(v)
 	// #string foo_bar_baz
 }

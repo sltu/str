@@ -3,10 +3,7 @@
 
 package main
 
-import (
-	"github.com/goforj/godump"
-	"github.com/goforj/str"
-)
+import "github.com/goforj/str"
 
 func main() {
 	// Slug produces an ASCII slug using the provided separator (default "-"), stripping accents where possible.
@@ -14,6 +11,6 @@ func main() {
 
 	// Example: build slug
 	v := str.Of("Go Forj Toolkit").Slug("-").String()
-	godump.Dump(v)
+	str.Dump(v)
 	// #string go-forj-toolkit
 }

@@ -3,16 +3,13 @@
 
 package main
 
-import (
-	"github.com/goforj/godump"
-	"github.com/goforj/str"
-)
+import "github.com/goforj/str"
 
 func main() {
 	// TrimRight trims trailing characters. If cutset is empty, trims Unicode whitespace.
 
 	// Example: trim right
 	v := str.Of("  GoForj  ").TrimRight("").String()
-	godump.Dump(v)
+	str.Dump(v)
 	// #string   GoForj
 }

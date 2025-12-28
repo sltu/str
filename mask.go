@@ -8,7 +8,7 @@ package str
 // Example: mask email
 //
 //	v := str.Of("gopher@example.com").Mask('*', 3, 4).String()
-//	godump.Dump(v)
+//	str.Dump(v)
 //	// #string gop***********.com
 func (s String) Mask(mask rune, revealLeft, revealRight int) String {
 	runes := []rune(s.s)

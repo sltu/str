@@ -3,16 +3,13 @@
 
 package main
 
-import (
-	"github.com/goforj/godump"
-	"github.com/goforj/str"
-)
+import "github.com/goforj/str"
 
 func main() {
 	// Len returns the number of runes in the string.
 
 	// Example: count runes instead of bytes
 	v := str.Of("gophers 🦫").Len()
-	godump.Dump(v)
+	str.Dump(v)
 	// #int 9
 }

@@ -3,10 +3,7 @@
 
 package main
 
-import (
-	"github.com/goforj/godump"
-	"github.com/goforj/str"
-)
+import "github.com/goforj/str"
 
 func main() {
 	// Before returns the substring before the first occurrence of sep.
@@ -14,6 +11,6 @@ func main() {
 
 	// Example: slice before marker
 	v := str.Of("gopher::go").Before("::").String()
-	godump.Dump(v)
+	str.Dump(v)
 	// #string gopher
 }

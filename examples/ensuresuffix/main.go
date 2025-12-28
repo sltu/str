@@ -3,16 +3,13 @@
 
 package main
 
-import (
-	"github.com/goforj/godump"
-	"github.com/goforj/str"
-)
+import "github.com/goforj/str"
 
 func main() {
 	// EnsureSuffix ensures the string ends with suffix, adding it if missing.
 
 	// Example: ensure suffix
 	v := str.Of("path/to").EnsureSuffix("/").String()
-	godump.Dump(v)
+	str.Dump(v)
 	// #string path/to/
 }

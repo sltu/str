@@ -11,7 +11,7 @@ import (
 // Example: normalize newline variants
 //
 //	v := str.Of("a\\r\\nb\\u2028c").NormalizeNewlines().String()
-//	godump.Dump(v)
+//	str.Dump(v)
 //	// #string a\nb\nc
 func (s String) NormalizeNewlines() String {
 	if !strings.ContainsAny(s.s, "\r\u0085\u2028\u2029") {

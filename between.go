@@ -9,7 +9,7 @@ import "strings"
 // Example: between first and last
 //
 //	v := str.Of("This is my name").Between("This", "name").String()
-//	godump.Dump(v)
+//	str.Dump(v)
 //	// #string  is my
 func (s String) Between(start, end string) String {
 	if start == "" || end == "" {
@@ -34,7 +34,7 @@ func (s String) Between(start, end string) String {
 // Example: minimal span between markers
 //
 //	v := str.Of("[a] bc [d]").BetweenFirst("[", "]").String()
-//	godump.Dump(v)
+//	str.Dump(v)
 //	// #string a
 func (s String) BetweenFirst(start, end string) String {
 	if start == "" || end == "" {

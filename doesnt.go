@@ -9,7 +9,7 @@ import "strings"
 // Example: doesn't contain any
 //
 //	v := str.Of("gophers are great")
-//	godump.Dump(v.DoesntContain("rust", "beam"))
+//	str.Dump(v.DoesntContain("rust", "beam"))
 //	// #bool true
 func (s String) DoesntContain(subs ...string) bool {
 	if len(subs) == 0 {
@@ -33,7 +33,7 @@ func (s String) DoesntContain(subs ...string) bool {
 // Example: doesn't contain (case-insensitive)
 //
 //	v := str.Of("gophers are great")
-//	godump.Dump(v.DoesntContainFold("GOPHER"))
+//	str.Dump(v.DoesntContainFold("GOPHER"))
 //	// #bool false
 func (s String) DoesntContainFold(subs ...string) bool {
 	if len(subs) == 0 {
@@ -57,7 +57,7 @@ func (s String) DoesntContainFold(subs ...string) bool {
 // Example: doesn't start with any
 //
 //	v := str.Of("gopher")
-//	godump.Dump(v.DoesntStartWith("go", "rust"))
+//	str.Dump(v.DoesntStartWith("go", "rust"))
 //	// #bool false
 func (s String) DoesntStartWith(prefixes ...string) bool {
 	if len(prefixes) == 0 {
@@ -77,7 +77,7 @@ func (s String) DoesntStartWith(prefixes ...string) bool {
 // Example: doesn't start with (case-insensitive)
 //
 //	v := str.Of("gopher")
-//	godump.Dump(v.DoesntStartWithFold("GO"))
+//	str.Dump(v.DoesntStartWithFold("GO"))
 //	// #bool false
 func (s String) DoesntStartWithFold(prefixes ...string) bool {
 	if len(prefixes) == 0 {
@@ -98,7 +98,7 @@ func (s String) DoesntStartWithFold(prefixes ...string) bool {
 // Example: doesn't end with any
 //
 //	v := str.Of("gopher")
-//	godump.Dump(v.DoesntEndWith("her", "cat"))
+//	str.Dump(v.DoesntEndWith("her", "cat"))
 //	// #bool false
 func (s String) DoesntEndWith(suffixes ...string) bool {
 	if len(suffixes) == 0 {
@@ -118,7 +118,7 @@ func (s String) DoesntEndWith(suffixes ...string) bool {
 // Example: doesn't end with (case-insensitive)
 //
 //	v := str.Of("gopher")
-//	godump.Dump(v.DoesntEndWithFold("HER"))
+//	str.Dump(v.DoesntEndWithFold("HER"))
 //	// #bool false
 func (s String) DoesntEndWithFold(suffixes ...string) bool {
 	if len(suffixes) == 0 {

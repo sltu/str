@@ -6,7 +6,7 @@ package str
 // Example: split words
 //
 //	v := str.Of("one, two, three").SplitWords()
-//	godump.Dump(v)
+//	str.Dump(v)
 //	// #[]string [one two three]
 func (s String) SplitWords() []string {
 	return splitWordsRunes(s.s)

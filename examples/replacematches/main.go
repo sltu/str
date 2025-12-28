@@ -4,7 +4,6 @@
 package main
 
 import (
-	"github.com/goforj/godump"
 	"github.com/goforj/str"
 	"regexp"
 )
@@ -15,6 +14,6 @@ func main() {
 	// Example: regex replace with callback
 	re := regexp.MustCompile(`\d+`)
 	v := str.Of("Hello 123 World").ReplaceMatches(re, func(m string) string { return "[" + m + "]" }).String()
-	godump.Dump(v)
+	str.Dump(v)
 	// #string Hello [123] World
 }

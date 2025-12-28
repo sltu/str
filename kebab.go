@@ -8,7 +8,7 @@ import "strings"
 // Example: kebab case
 //
 //	v := str.Of("fooBar baz").Kebab().String()
-//	godump.Dump(v)
+//	str.Dump(v)
 //	// #string foo-bar-baz
 func (s String) Kebab() String {
 	words := splitWordsRunes(s.s)

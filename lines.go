@@ -8,7 +8,7 @@ import "strings"
 // Example: split lines
 //
 //	v := str.Of("a\\r\\nb\\nc").Lines()
-//	godump.Dump(v)
+//	str.Dump(v)
 //	// #[]string [a b c]
 func (s String) Lines() []string {
 	normalized := s.NormalizeNewlines().String()

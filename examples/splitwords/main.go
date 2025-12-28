@@ -3,16 +3,13 @@
 
 package main
 
-import (
-	"github.com/goforj/godump"
-	"github.com/goforj/str"
-)
+import "github.com/goforj/str"
 
 func main() {
 	// SplitWords splits the string into words (Unicode letters/digits runs).
 
 	// Example: split words
 	v := str.Of("one, two, three").SplitWords()
-	godump.Dump(v)
+	str.Dump(v)
 	// #[]string [one two three]
 }

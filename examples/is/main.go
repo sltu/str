@@ -3,10 +3,7 @@
 
 package main
 
-import (
-	"github.com/goforj/godump"
-	"github.com/goforj/str"
-)
+import "github.com/goforj/str"
 
 func main() {
 	// Is reports whether the string matches any of the provided wildcard patterns.
@@ -14,6 +11,6 @@ func main() {
 
 	// Example: wildcard match
 	v := str.Of("foo/bar").Is("foo/*")
-	godump.Dump(v)
+	str.Dump(v)
 	// #bool true
 }

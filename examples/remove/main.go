@@ -3,16 +3,13 @@
 
 package main
 
-import (
-	"github.com/goforj/godump"
-	"github.com/goforj/str"
-)
+import "github.com/goforj/str"
 
 func main() {
 	// Remove deletes all occurrences of provided substrings.
 
 	// Example: remove substrings
 	v := str.Of("The Go Toolkit").Remove("Go ").String()
-	godump.Dump(v)
+	str.Dump(v)
 	// #string The Toolkit
 }

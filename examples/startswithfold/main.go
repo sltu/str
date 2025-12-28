@@ -3,16 +3,13 @@
 
 package main
 
-import (
-	"github.com/goforj/godump"
-	"github.com/goforj/str"
-)
+import "github.com/goforj/str"
 
 func main() {
 	// StartsWithFold reports whether the string starts with any of the provided prefixes using Unicode case folding.
 
 	// Example: starts with (case-insensitive)
 	v := str.Of("gopher").StartsWithFold("GO")
-	godump.Dump(v)
+	str.Dump(v)
 	// #bool true
 }

@@ -11,7 +11,7 @@ import (
 // Example: title map runes
 //
 //	v := str.Of("ß").ToTitle().String()
-//	godump.Dump(v)
+//	str.Dump(v)
 //	// #string SS
 func (s String) ToTitle() String {
 	var b strings.Builder

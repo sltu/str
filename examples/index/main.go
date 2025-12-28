@@ -3,16 +3,13 @@
 
 package main
 
-import (
-	"github.com/goforj/godump"
-	"github.com/goforj/str"
-)
+import "github.com/goforj/str"
 
 func main() {
 	// Index returns the rune index of the first occurrence of sub, or -1 if not found.
 
 	// Example: first rune index
 	v := str.Of("héllo").Index("llo")
-	godump.Dump(v)
+	str.Dump(v)
 	// #int 2
 }

@@ -3,10 +3,7 @@
 
 package main
 
-import (
-	"github.com/goforj/godump"
-	"github.com/goforj/str"
-)
+import "github.com/goforj/str"
 
 func main() {
 	// Headline converts the string into a human-friendly headline:
@@ -14,6 +11,6 @@ func main() {
 
 	// Example: headline
 	v := str.Of("emailNotification_sent").Headline().String()
-	godump.Dump(v)
+	str.Dump(v)
 	// #string Email Notification Sent
 }

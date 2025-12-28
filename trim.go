@@ -11,7 +11,7 @@ import (
 // Example: trim whitespace
 //
 //	v := str.Of("  GoForj  ").Trim("").String()
-//	godump.Dump(v)
+//	str.Dump(v)
 //	// #string GoForj
 func (s String) Trim(cutset string) String {
 	if cutset == "" {
@@ -26,7 +26,7 @@ func (s String) Trim(cutset string) String {
 // Example: trim left
 //
 //	v := str.Of("  GoForj  ").TrimLeft("").String()
-//	godump.Dump(v)
+//	str.Dump(v)
 //	// #string GoForj
 func (s String) TrimLeft(cutset string) String {
 	if cutset == "" {
@@ -41,7 +41,7 @@ func (s String) TrimLeft(cutset string) String {
 // Example: trim right
 //
 //	v := str.Of("  GoForj  ").TrimRight("").String()
-//	godump.Dump(v)
+//	str.Dump(v)
 //	// #string   GoForj
 func (s String) TrimRight(cutset string) String {
 	if cutset == "" {

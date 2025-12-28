@@ -8,7 +8,7 @@ import "strings"
 // Example: count substring
 //
 //	v := str.Of("gogophergo").Count("go")
-//	godump.Dump(v)
+//	str.Dump(v)
 //	// #int 3
 func (s String) Count(sub string) int {
 	if sub == "" {

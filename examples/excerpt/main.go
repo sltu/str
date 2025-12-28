@@ -3,10 +3,7 @@
 
 package main
 
-import (
-	"github.com/goforj/godump"
-	"github.com/goforj/str"
-)
+import "github.com/goforj/str"
 
 func main() {
 	// Excerpt returns a snippet around the first occurrence of needle with the given radius.
@@ -15,6 +12,6 @@ func main() {
 
 	// Example: excerpt with radius
 	v := str.Of("This is my name").Excerpt("my", 3, "...")
-	godump.Dump(v.String())
+	str.Dump(v.String())
 	// #string ...is my na...
 }

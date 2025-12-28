@@ -3,16 +3,13 @@
 
 package main
 
-import (
-	"github.com/goforj/godump"
-	"github.com/goforj/str"
-)
+import "github.com/goforj/str"
 
 func main() {
 	// Unwrap removes matching before and after strings if present.
 
 	// Example: unwrap string
 	v := str.Of("\"GoForj\"").Unwrap("\"", "\"").String()
-	godump.Dump(v)
+	str.Dump(v)
 	// #string GoForj
 }

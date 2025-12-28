@@ -6,7 +6,7 @@ package str
 // Example: reverse
 //
 //	v := str.Of("naïve").Reverse().String()
-//	godump.Dump(v)
+//	str.Dump(v)
 //	// #string evïan
 func (s String) Reverse() String {
 	runes := []rune(s.s)

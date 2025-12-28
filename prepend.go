@@ -6,7 +6,7 @@ package str
 // Example: prepend text
 //
 //	v := str.Of("World").Prepend("Hello ", "Go ").String()
-//	godump.Dump(v)
+//	str.Dump(v)
 //	// #string Hello Go World
 func (s String) Prepend(parts ...string) String {
 	out := s.s

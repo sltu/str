@@ -10,7 +10,7 @@ import "strings"
 // Example: excerpt with radius
 //
 //	v := str.Of("This is my name").Excerpt("my", 3, "...")
-//	godump.Dump(v.String())
+//	str.Dump(v.String())
 //	// #string ...is my na...
 func (s String) Excerpt(needle string, radius int, omission string) String {
 	if needle == "" {

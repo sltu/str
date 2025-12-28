@@ -4,7 +4,6 @@
 package main
 
 import (
-	"github.com/goforj/godump"
 	"github.com/goforj/str"
 	"regexp"
 )
@@ -14,6 +13,6 @@ func main() {
 
 	// Example: regex match
 	v := str.Of("abc123").IsMatch(regexp.MustCompile(`\d+`))
-	godump.Dump(v)
+	str.Dump(v)
 	// #bool true
 }

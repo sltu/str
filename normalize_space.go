@@ -8,7 +8,7 @@ import "unicode"
 // Example: normalize interior space
 //
 //	v := str.Of("  go   forj  ").NormalizeSpace().String()
-//	godump.Dump(v)
+//	str.Dump(v)
 //	// #string  go forj 
 func (s String) NormalizeSpace() String {
 	if s.s == "" {

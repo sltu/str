@@ -3,10 +3,7 @@
 
 package main
 
-import (
-	"github.com/goforj/godump"
-	"github.com/goforj/str"
-)
+import "github.com/goforj/str"
 
 func main() {
 	// DoesntContainFold reports true if none of the substrings are found using Unicode case folding.
@@ -14,6 +11,6 @@ func main() {
 
 	// Example: doesn't contain (case-insensitive)
 	v := str.Of("gophers are great")
-	godump.Dump(v.DoesntContainFold("GOPHER"))
+	str.Dump(v.DoesntContainFold("GOPHER"))
 	// #bool false
 }

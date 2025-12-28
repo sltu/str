@@ -6,7 +6,7 @@ package str
 // Example: rune lookup
 //
 //	v, ok := str.Of("gopher").CharAt(2)
-//	godump.Dump(string(v), ok)
+//	str.Dump(string(v), ok)
 //	// #string p
 //	// #bool true
 func (s String) CharAt(idx int) (rune, bool) {

@@ -8,7 +8,7 @@ import "encoding/base64"
 // Example: base64 encode
 //
 //	v := str.Of("gopher").ToBase64().String()
-//	godump.Dump(v)
+//	str.Dump(v)
 //	// #string Z29waGVy
 func (s String) ToBase64() String {
 	return String{s: base64.StdEncoding.EncodeToString([]byte(s.s))}
@@ -20,7 +20,7 @@ func (s String) ToBase64() String {
 // Example: base64 decode
 //
 //	v, err := str.Of("Z29waGVy").FromBase64()
-//	godump.Dump(v.String(), err)
+//	str.Dump(v.String(), err)
 //	// #string gopher
 //	// #error <nil>
 func (s String) FromBase64() (String, error) {

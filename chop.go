@@ -6,7 +6,7 @@ package str
 // Example: chop start
 //
 //	v := str.Of("https://goforj.dev").ChopStart("https://", "http://").String()
-//	godump.Dump(v)
+//	str.Dump(v)
 //	// #string goforj.dev
 func (s String) ChopStart(prefixes ...string) String {
 	for _, p := range prefixes {
@@ -26,7 +26,7 @@ func (s String) ChopStart(prefixes ...string) String {
 // Example: chop end
 //
 //	v := str.Of("file.txt").ChopEnd(".txt", ".md").String()
-//	godump.Dump(v)
+//	str.Dump(v)
 //	// #string file
 func (s String) ChopEnd(suffixes ...string) String {
 	for _, suf := range suffixes {

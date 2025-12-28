@@ -9,7 +9,7 @@ import "strings"
 // Example: contains any
 //
 //	v := str.Of("Go means gophers").Contains("rust", "gopher")
-//	godump.Dump(v)
+//	str.Dump(v)
 //	// #bool true
 func (s String) Contains(subs ...string) bool {
 	if len(subs) == 0 {
@@ -31,7 +31,7 @@ func (s String) Contains(subs ...string) bool {
 // Example: contains all
 //
 //	v := str.Of("Go means gophers").ContainsAll("Go", "gopher")
-//	godump.Dump(v)
+//	str.Dump(v)
 //	// #bool true
 func (s String) ContainsAll(subs ...string) bool {
 	if len(subs) == 0 {
@@ -57,7 +57,7 @@ func (s String) ContainsAll(subs ...string) bool {
 // Example: contains any (case-insensitive)
 //
 //	v := str.Of("Go means gophers").ContainsFold("GOPHER", "rust")
-//	godump.Dump(v)
+//	str.Dump(v)
 //	// #bool true
 func (s String) ContainsFold(subs ...string) bool {
 	if len(subs) == 0 {
@@ -82,7 +82,7 @@ func (s String) ContainsFold(subs ...string) bool {
 // Example: contains all (case-insensitive)
 //
 //	v := str.Of("Go means gophers").ContainsAllFold("go", "GOPHER")
-//	godump.Dump(v)
+//	str.Dump(v)
 //	// #bool true
 func (s String) ContainsAllFold(subs ...string) bool {
 	if len(subs) == 0 {

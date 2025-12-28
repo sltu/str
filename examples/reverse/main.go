@@ -3,16 +3,13 @@
 
 package main
 
-import (
-	"github.com/goforj/godump"
-	"github.com/goforj/str"
-)
+import "github.com/goforj/str"
 
 func main() {
 	// Reverse returns a rune-safe reversed string.
 
 	// Example: reverse
 	v := str.Of("naïve").Reverse().String()
-	godump.Dump(v)
+	str.Dump(v)
 	// #string evïan
 }

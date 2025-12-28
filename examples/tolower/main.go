@@ -3,16 +3,13 @@
 
 package main
 
-import (
-	"github.com/goforj/godump"
-	"github.com/goforj/str"
-)
+import "github.com/goforj/str"
 
 func main() {
 	// ToLower returns a lowercase copy of the string using Unicode rules.
 
 	// Example: lowercase text
 	v := str.Of("GoLang").ToLower().String()
-	godump.Dump(v)
+	str.Dump(v)
 	// #string golang
 }

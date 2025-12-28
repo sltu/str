@@ -8,7 +8,7 @@ import "strings"
 // Example: strip accents
 //
 //	v := str.Of("café déjà vu").Transliterate().String()
-//	godump.Dump(v)
+//	str.Dump(v)
 //	// #string cafe deja vu
 func (s String) Transliterate() String {
 	if s.s == "" {

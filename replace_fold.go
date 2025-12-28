@@ -11,7 +11,7 @@ import (
 // Example: replace all (case-insensitive)
 //
 //	v := str.Of("go gopher GO").ReplaceFold("GO", "Go").String()
-//	godump.Dump(v)
+//	str.Dump(v)
 //	// #string Go Gopher Go
 func (s String) ReplaceFold(old, repl string) String {
 	if old == "" {
@@ -30,7 +30,7 @@ func (s String) ReplaceFold(old, repl string) String {
 // Example: replace first (case-insensitive)
 //
 //	v := str.Of("go gopher GO").ReplaceFirstFold("GO", "Go").String()
-//	godump.Dump(v)
+//	str.Dump(v)
 //	// #string Go gopher GO
 func (s String) ReplaceFirstFold(old, repl string) String {
 	if old == "" {
@@ -49,7 +49,7 @@ func (s String) ReplaceFirstFold(old, repl string) String {
 // Example: replace last (case-insensitive)
 //
 //	v := str.Of("go gopher GO").ReplaceLastFold("GO", "Go").String()
-//	godump.Dump(v)
+//	str.Dump(v)
 //	// #string go gopher Go
 func (s String) ReplaceLastFold(old, repl string) String {
 	if old == "" {
@@ -135,7 +135,7 @@ func foldRuneStarts(s, old string) ([]int, int) {
 
 func replaceAt(s string, start, end int, repl string) string {
 	var b strings.Builder
-	b.Grow(len(s) - (end-start) + len(repl))
+	b.Grow(len(s) - (end - start) + len(repl))
 	b.WriteString(s[:start])
 	b.WriteString(repl)
 	b.WriteString(s[end:])

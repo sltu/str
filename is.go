@@ -12,7 +12,7 @@ import (
 // Example: wildcard match
 //
 //	v := str.Of("foo/bar").Is("foo/*")
-//	godump.Dump(v)
+//	str.Dump(v)
 //	// #bool true
 func (s String) Is(patterns ...string) bool {
 	if len(patterns) == 0 {

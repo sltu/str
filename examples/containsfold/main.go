@@ -3,10 +3,7 @@
 
 package main
 
-import (
-	"github.com/goforj/godump"
-	"github.com/goforj/str"
-)
+import "github.com/goforj/str"
 
 func main() {
 	// ContainsFold reports whether the string contains any of the provided substrings, using Unicode
@@ -15,6 +12,6 @@ func main() {
 
 	// Example: contains any (case-insensitive)
 	v := str.Of("Go means gophers").ContainsFold("GOPHER", "rust")
-	godump.Dump(v)
+	str.Dump(v)
 	// #bool true
 }

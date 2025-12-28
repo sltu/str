@@ -3,10 +3,7 @@
 
 package main
 
-import (
-	"github.com/goforj/godump"
-	"github.com/goforj/str"
-)
+import "github.com/goforj/str"
 
 func main() {
 	// Slice returns the substring between rune offsets [start:end).
@@ -14,6 +11,6 @@ func main() {
 
 	// Example: rune-safe slice
 	v := str.Of("naïve café").Slice(3, 7).String()
-	godump.Dump(v)
+	str.Dump(v)
 	// #string e ca
 }

@@ -6,7 +6,7 @@ package str
 // Example: last word
 //
 //	v := str.Of("Hello world").LastWord().String()
-//	godump.Dump(v)
+//	str.Dump(v)
 //	// #string world
 func (s String) LastWord() String {
 	words := splitWordsRunes(s.s)
